@@ -1,0 +1,1473 @@
+/* ============================
+   GOOGLE FONT
+============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================
+   RESET
+============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #225b8d, #46f6ff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* ============================
+   VARIABLES
+============================= */
+
+:root {
+
+    --primary: #4F46E5;
+    --primary-light: #6D5DF6;
+
+    --success: #10B981;
+
+    --danger: #EF4444;
+
+    --warning: #F59E0B;
+
+    --text: #222;
+
+    --light: #ffffff;
+
+    --border: #e4e4e4;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, .15);
+
+    --glass: rgba(255, 255, 255, .22);
+
+}
+
+/* ============================
+   CONTAINER
+============================= */
+
+.container {
+
+    width: 100%;
+    max-width: 1300px;
+
+    background: rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ============================
+   HEADER
+============================= */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+header h1 {
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+}
+
+header p {
+
+    margin-top: 8px;
+
+    color: #555;
+
+}
+
+#themeBtn {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: white;
+
+    font-size: 20px;
+
+    transition: .3s;
+
+}
+
+#themeBtn:hover {
+
+    transform: rotate(180deg);
+
+}
+
+/* ============================
+   DASHBOARD
+============================= */
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+.card {
+
+    background: rgb(255, 255, 255);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.card h2 {
+
+    font-size: 2rem;
+
+    color: var(--primary);
+
+}
+
+.card p {
+
+    margin-top: 8px;
+
+    color: #666;
+
+}
+
+/* ============================
+   PROGRESS BAR
+============================= */
+
+.progress-container {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+}
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #ddd;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+#progressFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: linear-gradient(90deg, #3932c0, #00D4FF);
+
+    transition: .5s;
+
+}
+
+/* ============================
+   TASK FORM
+============================= */
+
+.task-form {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+.task-form input,
+
+.task-form select {
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+.task-form input:focus,
+
+.task-form select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, .15);
+
+}
+
+/* ============================
+   BUTTON
+============================= */
+
+.task-form button {
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    padding: 15px 22px;
+
+}
+
+.task-form button:hover {
+
+    background: var(--primary-light);
+
+    transform: translateY(-3px);
+
+}
+
+.task-form button i {
+
+    margin-right: 8px;
+
+}
+
+/* ============================
+   INPUT PLACEHOLDER
+============================= */
+
+::placeholder {
+
+    color: #888;
+
+}
+
+/* ============================
+   SECTION TITLES
+============================= */
+
+section h2 {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+
+}
+
+/* ============================
+   SIMPLE FADE ANIMATION
+============================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.container {
+
+    animation: fadeIn .6s ease;
+
+}
+
+
+
+
+/* ===========================================
+   TOOLBAR (SEARCH + FILTER)
+=========================================== */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.toolbar input,
+.toolbar select {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+
+.toolbar input {
+    flex: 1;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, .15);
+}
+
+/* ===========================================
+   MAIN LAYOUT
+=========================================== */
+
+main {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ===========================================
+   CALENDAR
+=========================================== */
+
+.calendar-section {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.calendar-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.calendar-header h2 {
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+}
+
+.calendar-header button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    transition: .3s;
+
+}
+
+.calendar-header button:hover {
+
+    transform: scale(1.08);
+
+}
+
+.weekdays {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    color: #555;
+
+}
+
+#calendar {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 8px;
+
+}
+
+.day {
+
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    position: relative;
+
+    font-weight: 500;
+
+}
+
+.day:hover {
+
+    background: #EEF2FF;
+
+}
+
+.empty {
+
+    visibility: hidden;
+
+}
+
+/* ===========================================
+   TODAY
+=========================================== */
+
+.today {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-weight: bold;
+
+}
+
+/* ===========================================
+   SELECTED DATE
+=========================================== */
+
+.selected {
+
+    border: 2px solid var(--primary);
+
+}
+
+/* ===========================================
+   CALENDAR TASK DOT
+=========================================== */
+
+.day.has-task::after {
+
+    content: "";
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #10B981;
+
+    position: absolute;
+
+    bottom: 6px;
+
+}
+
+/* ===========================================
+   TASK SECTION
+=========================================== */
+
+.task-section {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    min-height: 500px;
+
+}
+
+.task-section h2 {
+
+    margin-bottom: 20px;
+
+}
+
+/* ===========================================
+   TASK LIST
+=========================================== */
+
+#taskList {
+
+    list-style: none;
+
+}
+
+#taskList li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    border: 1px solid #ececec;
+
+    margin-bottom: 15px;
+
+    transition: .3s;
+
+    background: #fff;
+
+}
+
+#taskList li:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+/* ===========================================
+   TASK INFO
+=========================================== */
+
+.task-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex: 1;
+
+}
+
+.task-info input[type="checkbox"] {
+
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+
+}
+
+.task-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+.task-title {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+.completed .task-title {
+
+    text-decoration: line-through;
+
+    color: #999;
+
+}
+
+/* ===========================================
+   DATE TEXT
+=========================================== */
+
+.task-date {
+
+    font-size: 13px;
+
+    color: #666;
+
+}
+
+/* ===========================================
+   PRIORITY BADGES
+=========================================== */
+
+.priority {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    width: fit-content;
+
+}
+
+.priority.high {
+
+    background: #EF4444;
+
+}
+
+.priority.medium {
+
+    background: #F59E0B;
+
+}
+
+.priority.low {
+
+    background: #10B981;
+
+}
+
+/* ===========================================
+   ACTION BUTTONS
+=========================================== */
+
+.task-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.task-actions button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    color: #fff;
+
+}
+
+.edit-btn {
+
+    background: #3B82F6;
+
+}
+
+.delete-btn {
+
+    background: #EF4444;
+
+}
+
+.complete-btn {
+
+    background: #10B981;
+
+}
+
+.task-actions button:hover {
+
+    transform: scale(1.08);
+
+}
+
+/* ===========================================
+   EMPTY TASK MESSAGE
+=========================================== */
+
+.empty-message {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #888;
+
+}
+
+.empty-message i {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    color: #bbb;
+
+}
+
+.empty-message p {
+
+    font-size: 18px;
+
+}
+
+/* ===========================================
+   TASK ENTRY ANIMATION
+=========================================== */
+
+@keyframes slideUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+#taskList li {
+
+    animation: slideUp .35s ease;
+
+}
+
+
+
+
+
+
+
+/* ===========================================
+   DARK MODE
+=========================================== */
+
+body.dark {
+
+    background: linear-gradient(135deg, #0F172A, #1E293B);
+
+    color: #F8FAFC;
+
+}
+
+body.dark .container {
+
+    background: rgba(15, 23, 42, .65);
+
+    backdrop-filter: blur(20px);
+
+}
+
+body.dark header h1,
+body.dark section h2 {
+
+    color: white;
+
+}
+
+body.dark header p {
+
+    color: #CBD5E1;
+
+}
+
+body.dark .card,
+body.dark .task-section,
+body.dark .calendar-section,
+body.dark .progress-container {
+
+    background: #1E293B;
+
+    color: white;
+
+}
+
+body.dark .card p,
+body.dark .task-date {
+
+    color: #CBD5E1;
+
+}
+
+body.dark input,
+body.dark select {
+
+    background: #334155;
+
+    color: white;
+
+    border: 1px solid #475569;
+
+}
+
+body.dark input::placeholder {
+
+    color: #CBD5E1;
+
+}
+
+body.dark .toolbar input,
+body.dark .toolbar select {
+
+    background: #334155;
+
+    color: white;
+
+}
+
+body.dark #taskList li {
+
+    background: #334155;
+
+    border-color: #475569;
+
+}
+
+body.dark .day:hover {
+
+    background: #334155;
+
+}
+
+body.dark .weekdays {
+
+    color: #CBD5E1;
+
+}
+
+body.dark .progress-bar {
+
+    background: #475569;
+
+}
+
+body.dark #themeBtn {
+
+    background: #334155;
+
+    color: white;
+
+}
+
+/* ===========================================
+   CARD GLOW EFFECT
+=========================================== */
+
+.card {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    background: rgba(255, 255, 255, .15);
+
+    border-radius: 50%;
+
+    top: -60px;
+
+    right: -60px;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+}
+
+/* ===========================================
+   CALENDAR ANIMATION
+=========================================== */
+
+.day {
+
+    transition: .25s ease;
+
+}
+
+.day:hover {
+
+    transform: scale(1.08);
+
+}
+
+.today {
+
+    box-shadow: 0 0 15px rgba(79, 70, 229, .45);
+
+}
+
+/* ===========================================
+   TASK CARD EFFECT
+=========================================== */
+
+#taskList li {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+#taskList li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 6px;
+
+    height: 100%;
+
+    background: var(--primary);
+
+}
+
+.completed::before {
+
+    background: var(--success);
+
+}
+
+/* ===========================================
+   BUTTON EFFECTS
+=========================================== */
+
+button {
+
+    transition: .3s ease;
+
+}
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #E5E7EB;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #4338CA;
+
+}
+
+/* ===========================================
+   PRIORITY SHADOW
+=========================================== */
+
+.priority.high {
+
+    box-shadow: 0 4px 10px rgba(239, 68, 68, .35);
+
+}
+
+.priority.medium {
+
+    box-shadow: 0 4px 10px rgba(245, 158, 11, .35);
+
+}
+
+.priority.low {
+
+    box-shadow: 0 4px 10px rgba(16, 185, 129, .35);
+
+}
+
+/* ===========================================
+   FLOAT ANIMATION
+=========================================== */
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-4px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+.dashboard .card {
+
+    animation: floating 5s ease-in-out infinite;
+
+}
+
+.dashboard .card:nth-child(2) {
+
+    animation-delay: .4s;
+
+}
+
+.dashboard .card:nth-child(3) {
+
+    animation-delay: .8s;
+
+}
+
+.dashboard .card:nth-child(4) {
+
+    animation-delay: 1.2s;
+
+}
+
+/* ===========================================
+   FADE SCALE
+=========================================== */
+
+@keyframes fadeScale {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+.calendar-section,
+.task-section {
+
+    animation: fadeScale .45s ease;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1100px) {
+
+    .dashboard {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .calendar-section {
+
+        order: 2;
+
+    }
+
+    .task-section {
+
+        order: 1;
+
+    }
+
+}
+
+/* Tablet */
+
+@media(max-width:768px) {
+
+    .container {
+
+        padding: 20px;
+
+    }
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+    .task-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .toolbar {
+
+        flex-direction: column;
+
+    }
+
+    .toolbar input {
+
+        width: 100%;
+
+    }
+
+    .toolbar select {
+
+        width: 100%;
+
+    }
+
+    .dashboard {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .card {
+
+        padding: 18px;
+
+    }
+
+    .calendar-header h2 {
+
+        font-size: 18px;
+
+    }
+
+    .day {
+
+        height: 45px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:500px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .weekdays {
+
+        font-size: 12px;
+
+    }
+
+    .day {
+
+        height: 40px;
+
+        font-size: 12px;
+
+    }
+
+    .task-actions {
+
+        flex-direction: column;
+
+    }
+
+    .task-actions button {
+
+        width: 36px;
+
+        height: 36px;
+
+    }
+
+    #taskList li {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .task-info {
+
+        width: 100%;
+
+    }
+
+    .task-actions {
+
+        width: 100%;
+
+        justify-content: flex-end;
+
+    }
+
+    .card h2 {
+
+        font-size: 28px;
+
+    }
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/* ===========================================
+   UTILITY CLASSES
+=========================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+.center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.text-success {
+
+    color: var(--success);
+
+}
+
+.text-danger {
+
+    color: var(--danger);
+
+}
+
+.text-warning {
+
+    color: var(--warning);
+
+}
+
+.shadow {
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+
+}
+
+.rounded {
+
+    border-radius: 15px;
+
+}
+
+/* ===========================================
+   END OF STYLE
+=========================================== */

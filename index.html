@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker Pro</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= Header ================= -->
+
+        <header>
+
+            <div>
+                <h1>Task Tracker Pro</h1>
+                <p>Organize your daily workflow efficiently.</p>
+            </div>
+
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </header>
+
+        <!-- ================= Dashboard ================= -->
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h2 id="totalTasks">0</h2>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="card">
+                <h2 id="pendingTasks">0</h2>
+                <p>Pending</p>
+            </div>
+
+            <div class="card">
+                <h2 id="completedTasks">0</h2>
+                <p>Completed</p>
+            </div>
+
+            <div class="card">
+                <h2 id="completionRate">0%</h2>
+                <p>Completion</p>
+            </div>
+
+        </section>
+
+        <!-- ================= Progress ================= -->
+
+        <section class="progress-container">
+
+            <div class="progress-header">
+
+                <span>Progress</span>
+
+                <span id="progressText">0%</span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Add Task ================= -->
+
+        <section class="task-form">
+
+            <input type="text" id="taskInput" placeholder="Enter task...">
+
+            <input type="date" id="taskDate">
+
+            <select id="taskPriority">
+
+                <option value="High">High</option>
+
+                <option value="Medium" selected>Medium</option>
+
+                <option value="Low">Low</option>
+
+            </select>
+
+            <button id="addTaskBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Task
+
+            </button>
+
+        </section>
+
+        <!-- ================= Search ================= -->
+
+        <section class="toolbar">
+
+            <input type="text" id="searchTask" placeholder="Search task...">
+
+            <select id="filterTask">
+
+                <option value="all">All</option>
+
+                <option value="pending">Pending</option>
+
+                <option value="completed">Completed</option>
+
+            </select>
+
+        </section>
+
+        <!-- ================= Main ================= -->
+
+        <main>
+
+            <!-- Calendar -->
+
+            <section class="calendar-section">
+
+                <div class="calendar-header">
+
+                    <button id="prevMonth">
+
+                        <i class="fa-solid fa-angle-left"></i>
+
+                    </button>
+
+                    <h2 id="monthYear"></h2>
+
+                    <button id="nextMonth">
+
+                        <i class="fa-solid fa-angle-right"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="weekdays">
+
+                    <div>Sun</div>
+
+                    <div>Mon</div>
+
+                    <div>Tue</div>
+
+                    <div>Wed</div>
+
+                    <div>Thu</div>
+
+                    <div>Fri</div>
+
+                    <div>Sat</div>
+
+                </div>
+
+                <div id="calendar"></div>
+
+            </section>
+
+            <!-- Task List -->
+
+            <section class="task-section">
+
+                <h2>Your Tasks</h2>
+
+                <ul id="taskList"></ul>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="storage.js"></script>
+
+    <script src="calendar.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
