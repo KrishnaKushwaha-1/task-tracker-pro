@@ -437,9 +437,7 @@ Invoke-RestMethod `
 * [ ] Task reminders
 * [ ] Notifications
 * [ ] Dark/light theme
-* [ ] Production deployment
-
----
+* [ ] Production deployments 
 
 ## 🎯 Project Objectives
 
