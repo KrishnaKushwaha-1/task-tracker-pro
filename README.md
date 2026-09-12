@@ -1,330 +1,447 @@
-# Task Tracker Pro
+🚀 Task Tracker Pro
 
-A modern productivity and task management web application designed to help users organize tasks, manage priorities, track progress, and build productive habits.
+Task Tracker Pro is a full-stack productivity and task management application designed to help users organize tasks, manage priorities, monitor progress, and improve productivity.
 
-The project is being developed as a **full-stack application** with a Java Spring Boot backend, MySQL database, secure user authentication, and a responsive frontend.
+The application is being developed using Java Spring Boot, Spring Security, JWT authentication, MySQL, and a responsive HTML/CSS/JavaScript frontend.
 
----
-
-## 🚀 Features
-
-### Task Management
-
-* Create and manage personal tasks
-* Set task priorities
-* Assign due dates
-* Track pending and completed tasks
-* Search and filter tasks
-* Calendar-based task organization
-* Task progress tracking
-
-### User Authentication
-
-* User registration
-* Email-based user accounts
-* Secure password hashing using BCrypt
-* User login
-* JWT-based authentication
-* Protected API endpoints
-
-### User Profile & Activity
-
-* Individual user profiles
-* User-specific task data
-* Activity tracking
-* Productivity statistics
-* Task completion history
-* Personalized dashboard
-
-> Profile analytics and advanced activity features are planned for the next development phase.
+«Project Status: 🚧 In Active Development»
 
 ---
 
-## 🛠️ Tech Stack
+📋 Table of Contents
 
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Responsive Web Design
-* Local Storage / REST API integration
-
-### Backend
-
-* Java
-* Spring Boot 3.5
-* Spring Web
-* Spring Data JPA
-* Spring Security
-* REST APIs
-* JWT
-
-### Database
-
-* MySQL 8
-* Hibernate ORM
-
-### Development Tools
-
-* VS Code
-* Maven Wrapper
-* Git
-* GitHub
-* Postman
-* MySQL Workbench
+- "Overview" (#-overview)
+- "Features" (#-features)
+- "Tech Stack" (#-tech-stack)
+- "System Architecture" (#-system-architecture)
+- "Project Structure" (#-project-structure)
+- "Authentication Flow" (#-authentication-flow)
+- "Security" (#-security)
+- "Database" (#-database)
+- "API Documentation" (#-api-documentation)
+- "Getting Started" (#-getting-started)
+- "API Testing" (#-api-testing)
+- "Development Roadmap" (#-development-roadmap)
+- "Future Enhancements" (#-future-enhancements)
+- "Learning Outcomes" (#-learning-outcomes)
+- "Author" (#-author)
 
 ---
 
-## 🏗️ Project Architecture
+🎯 Overview
 
-```text
-Task Tracker Pro
-│
-├── Frontend
-│   ├── HTML
-│   ├── CSS
-│   └── JavaScript
-│
-└── Backend
-    ├── Controller
-    ├── Service
-    ├── Repository
-    ├── Entity
-    ├── DTO
-    ├── Security
-    └── Configuration
-            │
-            ▼
-        MySQL Database
-```
+Task Tracker Pro provides a centralized platform for managing personal tasks and tracking productivity.
+
+The application follows a layered backend architecture with separate Controller, Service, Repository, Entity, DTO, and Security components.
+
+Core Objectives
+
+- Create and manage personal tasks
+- Prioritize important activities
+- Assign due dates
+- Track task completion
+- Provide user-specific data
+- Secure user accounts and APIs
+- Build a foundation for productivity analytics
 
 ---
 
-## 📁 Backend Structure
+✨ Features
 
-```text
-src/
-└── main/
-    ├── java/
-    │   └── com/
-    │       └── krishna/
-    │           └── tasktracker/
-    │               │
-    │               ├── config/
-    │               │   └── SecurityConfig.java
-    │               │
-    │               ├── controller/
-    │               │   └── AuthController.java
-    │               │
-    │               ├── dto/
-    │               │   ├── RegisterRequest.java
-    │               │   ├── LoginRequest.java
-    │               │   └── LoginResponse.java
-    │               │
-    │               ├── entity/
-    │               │   └── User.java
-    │               │
-    │               ├── repository/
-    │               │   └── UserRepository.java
-    │               │
-    │               └── service/
-    │                   ├── AuthService.java
-    │                   └── JwtService.java
-    │
-    └── resources/
-        └── application.properties
-```
+🔐 Authentication & Security
+
+- User registration
+- Email-based authentication
+- Secure password hashing using BCrypt
+- JWT-based authentication architecture
+- Protected API endpoint support
+- User-specific data isolation
+
+✅ Task Management
+
+Planned task-management functionality includes:
+
+- Create tasks
+- Update tasks
+- Delete tasks
+- Mark tasks as completed
+- Assign priorities
+- Set due dates
+- Search and filter tasks
+- Track task progress
+- Calendar-based task organization
+
+👤 User Profile & Activity
+
+Planned functionality includes:
+
+- Personal user profiles
+- Profile editing
+- Activity timeline
+- Task completion history
+- Productivity statistics
+- Personalized dashboard
+
+📊 Productivity
+
+Future versions will provide:
+
+- Productivity charts
+- Completion-rate analysis
+- Daily/weekly productivity summaries
+- Achievement tracking
+- Personalized productivity insights
 
 ---
 
-## 🔐 Authentication Flow
+🛠️ Tech Stack
 
-The authentication system follows a secure registration and login architecture:
+Frontend
 
-```text
-                    ┌──────────────┐
-                    │    Client    │
-                    └──────┬───────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │ AuthController│
-                    └──────┬───────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │ AuthService  │
-                    └──────┬───────┘
-                           │
-                  ┌────────┴────────┐
-                  ▼                 ▼
-             Password           UserRepository
-              BCrypt                 │
+Technology| Purpose
+HTML5| Application structure
+CSS3| Styling and responsive design
+JavaScript ES6+| Client-side functionality
+REST API| Backend communication
+Local Storage| Client-side data/token management
+
+Backend
+
+Technology| Purpose
+Java 21| Backend development
+Spring Boot 3.5| Application framework
+Spring Web| REST API development
+Spring Data JPA| Data persistence
+Hibernate| ORM
+Spring Security| Authentication & authorization
+JWT| Token-based authentication
+BCrypt| Password hashing
+
+Database
+
+Technology| Purpose
+MySQL 8| Relational database
+JPA/Hibernate| Database interaction and ORM
+
+Development Tools
+
+- Git
+- GitHub
+- VS Code
+- IntelliJ IDEA / Eclipse
+- Maven Wrapper
+- Postman
+- MySQL Workbench
+
+---
+
+🏗️ System Architecture
+
+                         ┌─────────────────────┐
+                         │       Client        │
+                         │ HTML/CSS/JavaScript │
+                         └──────────┬──────────┘
+                                    │
+                              HTTP / REST
+                                    │
                                     ▼
-                               MySQL Database
-```
+                         ┌─────────────────────┐
+                         │   Spring Boot API   │
+                         └──────────┬──────────┘
+                                    │
+                    ┌───────────────┼───────────────┐
+                    │               │               │
+                    ▼               ▼               ▼
+              ┌──────────┐   ┌──────────┐   ┌──────────┐
+              │Controller│   │ Service  │   │ Security │
+              └────┬─────┘   └────┬─────┘   └────┬─────┘
+                   │              │              │
+                   └──────────────┼──────────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │ Repository / JPA│
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │     MySQL 8     │
+                         └─────────────────┘
 
-For login:
+---
 
-```text
-User Login
-    │
-    ▼
-Verify Email
-    │
-    ▼
-Verify BCrypt Password
-    │
-    ▼
+📁 Project Structure
+
+task-tracker-pro/
+│
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   └── js/
+│
+├── backend/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/
+│   │       │   └── com/
+│   │       │       └── krishna/
+│   │       │           └── tasktracker/
+│   │       │               │
+│   │       │               ├── config/
+│   │       │               │   └── SecurityConfig.java
+│   │       │               │
+│   │       │               ├── controller/
+│   │       │               │   └── AuthController.java
+│   │       │               │
+│   │       │               ├── dto/
+│   │       │               │   ├── RegisterRequest.java
+│   │       │               │   ├── LoginRequest.java
+│   │       │               │   └── LoginResponse.java
+│   │       │               │
+│   │       │               ├── entity/
+│   │       │               │   └── User.java
+│   │       │               │
+│   │       │               ├── repository/
+│   │       │               │   └── UserRepository.java
+│   │       │               │
+│   │       │               └── service/
+│   │       │                   ├── AuthService.java
+│   │       │                   └── JwtService.java
+│   │       │
+│   │       └── resources/
+│   │           └── application.properties
+│   │
+│   ├── pom.xml
+│   ├── mvnw
+│   └── mvnw.cmd
+│
+└── README.md
+
+---
+
+🔐 Authentication Architecture
+
+Task Tracker Pro uses a layered authentication architecture based on Spring Security, BCrypt, and JWT.
+
+Registration Flow
+
+User
+ │
+ ▼
+Registration Request
+ │
+ ▼
+AuthController
+ │
+ ▼
+AuthService
+ │
+ ├── Validate User
+ │
+ ├── Hash Password using BCrypt
+ │
+ ▼
+UserRepository
+ │
+ ▼
+MySQL Database
+
+Passwords are never stored as plain text.
+
+A password such as:
+
+Password@123
+
+is stored as a BCrypt hash similar to:
+
+$2a$10$.................................................
+
+---
+
+Login Flow
+
+User
+ │
+ ▼
+Login Request
+ │
+ ▼
+AuthController
+ │
+ ▼
+AuthService
+ │
+ ├── Find User by Email
+ │
+ ├── Verify BCrypt Password
+ │
+ ▼
 Generate JWT
-    │
-    ▼
+ │
+ ▼
 Return Authentication Token
-```
+
+The client can subsequently send the JWT with authenticated API requests:
+
+Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-## 🔒 Password Security
+🛡️ Security
 
-User passwords are **never stored as plain text**.
+The application is designed around the following security principles:
 
-During registration, the password is encrypted using:
+Password Protection
 
-```text
+Passwords are hashed using:
+
 BCryptPasswordEncoder
-```
 
-Example database value:
+Plain-text passwords are not stored in the database.
 
-```text
-$2a$10$...
-```
+JWT Authentication
 
-This protects user credentials even if the database is accessed directly.
+After successful login, the server generates a signed JWT token.
+
+The token can be used to authenticate subsequent API requests.
+
+Protected Resources
+
+Authenticated endpoints can be protected through Spring Security.
+
+Client
+   │
+   │ Authorization: Bearer JWT
+   ▼
+Spring Security
+   │
+   ├── Validate Token
+   │
+   ├── Authenticate User
+   │
+   ▼
+Protected Controller
+
+«Note: Complete JWT filter integration and protected endpoint implementation are part of the current development roadmap.»
 
 ---
 
-## 🗄️ Database
+🗄️ Database
 
-The application uses MySQL with the database:
+The application uses MySQL 8 with Hibernate/JPA for persistence.
 
-```sql
+Database Creation
+
 CREATE DATABASE task_tracker;
-```
 
-The current user table contains:
+Current User Model
 
-```text
 users
+│
 ├── id
 ├── full_name
 ├── email
 ├── password
 └── created_at
-```
 
-Hibernate/JPA manages the database schema through the application's JPA configuration.
+JPA/Hibernate manages the database schema according to the configured application properties.
 
 ---
 
-## 🔌 Authentication API
+🔌 REST API
 
-### Register User
+Authentication APIs
 
-```http
+Register User
+
 POST /api/auth/register
-```
 
-Request:
+Request
 
-```json
 {
   "fullName": "Krishna Kushwaha",
   "email": "user@example.com",
   "password": "Password@123"
 }
-```
 
-Successful response:
+Response
 
-```text
 User registered successfully!
-```
 
-### Login User
+---
 
-```http
+Login User
+
 POST /api/auth/login
-```
 
-Request:
+Request
 
-```json
 {
   "email": "user@example.com",
   "password": "Password@123"
 }
-```
 
-Successful authentication returns a JWT token.
+Response
 
----
-
-## ⚙️ Local Setup
-
-### Prerequisites
-
-Install the following:
-
-* Java 21 or compatible JDK
-* MySQL 8
-* Git
-* VS Code or another Java IDE
-
-The project includes the **Maven Wrapper**, so a separate Maven installation is not required.
-
----
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/KrishnaKushwaha-1/task-tracker-pro.git
-```
-
-```bash
-cd task-tracker-pro
-```
-
----
-
-### 2. Create MySQL Database
-
-Open MySQL and run:
-
-```sql
-CREATE DATABASE task_tracker;
-```
-
-Then select it:
-
-```sql
-USE task_tracker;
-```
-
----
-
-### 3. Configure Database Connection
-
-Update:
-
-```text
-src/main/resources/application.properties
-```
+A successful authentication returns a JWT token.
 
 Example:
 
-```properties
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9..."
+}
+
+«The exact response structure depends on the current "LoginResponse" implementation.»
+
+---
+
+⚙️ Getting Started
+
+Follow these steps to run the project locally.
+
+Prerequisites
+
+Make sure the following are installed:
+
+- Java 21 or compatible JDK
+- MySQL 8
+- Git
+- VS Code / IntelliJ IDEA / Eclipse
+
+Maven does not need to be installed separately because the project includes the Maven Wrapper.
+
+---
+
+1. Clone the Repository
+
+git clone https://github.com/KrishnaKushwaha-1/task-tracker-pro.git
+
+Navigate to the project:
+
+cd task-tracker-pro
+
+---
+
+2. Create the Database
+
+Open MySQL and execute:
+
+CREATE DATABASE task_tracker;
+
+Optional:
+
+USE task_tracker;
+
+---
+
+3. Configure MySQL
+
+Open:
+
+src/main/resources/application.properties
+
+Configure your database connection:
+
 spring.application.name=TaskTracker
 
 spring.datasource.url=jdbc:mysql://localhost:3306/task_tracker
@@ -336,172 +453,300 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 
 server.port=8080
-```
 
 Replace:
 
-```text
 YOUR_MYSQL_PASSWORD
-```
 
 with your local MySQL password.
 
+Security Recommendation
+
+For production environments, avoid committing database credentials directly to "application.properties".
+
+Use environment variables or a secure configuration system instead.
+
 ---
 
-### 4. Compile the Project
+▶️ Running the Application
 
-On Windows:
+Windows
 
-```powershell
+Clean the project:
+
 .\mvnw.cmd clean
-```
 
-Then:
+Compile:
 
-```powershell
 .\mvnw.cmd compile
-```
 
----
+Run:
 
-### 5. Run the Application
-
-```powershell
 .\mvnw.cmd spring-boot:run
-```
-
-The backend will run at:
-
-```text
-http://localhost:8080
-```
 
 ---
 
-## 🧪 API Testing
+Linux / macOS
 
-The authentication APIs can be tested using **Postman** or PowerShell.
+./mvnw clean
 
-Example PowerShell registration request:
+./mvnw compile
 
-```powershell
+./mvnw spring-boot:run
+
+The backend will be available at:
+
+http://localhost:8080
+
+---
+
+🧪 API Testing
+
+APIs can be tested using tools such as:
+
+- Postman
+- PowerShell
+- cURL
+- Frontend REST API integration
+
+PowerShell Registration Example
+
 Invoke-RestMethod `
   -Uri "http://localhost:8080/api/auth/register" `
   -Method POST `
   -ContentType "application/json" `
   -Body '{"fullName":"Krishna Kushwaha","email":"user@example.com","password":"Password@123"}'
-```
+
+Login Example
+
+Invoke-RestMethod `
+  -Uri "http://localhost:8080/api/auth/login" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"email":"user@example.com","password":"Password@123"}'
 
 ---
 
-## 🔄 Development Roadmap
+🗺️ Development Roadmap
 
-### Phase 1 — Authentication
+Phase 1 — Authentication
 
-* [x] Spring Boot setup
-* [x] MySQL integration
-* [x] User entity
-* [x] User repository
-* [x] Registration API
-* [x] BCrypt password hashing
-* [x] JWT service
-* [ ] Complete JWT login integration
-* [ ] JWT authentication filter
-* [ ] Protected API endpoints
-
-### Phase 2 — Task Management
-
-* [ ] Task entity
-* [ ] Task repository
-* [ ] Create task API
-* [ ] Update task API
-* [ ] Delete task API
-* [ ] Complete task API
-* [ ] User-specific tasks
-* [ ] Search and filtering
-
-### Phase 3 — Profile & Activity
-
-* [ ] User profile
-* [ ] Profile editing
-* [ ] Activity timeline
-* [ ] Productivity statistics
-* [ ] Task completion analytics
-* [ ] User dashboard
-
-### Phase 4 — Advanced Features
-
-* [ ] Interactive calendar
-* [ ] Productivity charts
-* [ ] Achievement system
-* [ ] Task reminders
-* [ ] Notifications
-* [ ] Dark/light theme
-* [ ] Production deployments 
-
-## 🎯 Project Objectives
-
-Task Tracker Pro aims to provide a centralized productivity platform where users can:
-
-1. Organize their daily tasks.
-2. Prioritize important work.
-3. Track task completion.
-4. Monitor productivity.
-5. Manage personal activity.
-6. Secure their data through user authentication.
+- [x] Spring Boot project setup
+- [x] MySQL integration
+- [x] User entity
+- [x] User repository
+- [x] Registration API
+- [x] BCrypt password hashing
+- [x] JWT service
+- [ ] Complete JWT login integration
+- [ ] JWT authentication filter
+- [ ] Protected API endpoints
+- [ ] Authentication exception handling
 
 ---
 
-## 💡 Key Learning Outcomes
+Phase 2 — Task Management
 
-This project demonstrates practical experience with:
-
-* Object-Oriented Programming
-* Java and Spring Boot
-* REST API development
-* Spring Data JPA
-* Hibernate ORM
-* MySQL database integration
-* Authentication and authorization
-* BCrypt password hashing
-* JWT-based security
-* MVC-style application architecture
-* API testing
-* Git and GitHub
-* Full-stack application development
+- [ ] Task entity
+- [ ] Task repository
+- [ ] Task service
+- [ ] Create task API
+- [ ] Update task API
+- [ ] Delete task API
+- [ ] Complete task API
+- [ ] User-specific tasks
+- [ ] Task priorities
+- [ ] Due dates
+- [ ] Search and filtering
+- [ ] Task status management
 
 ---
 
-## 📌 Future Enhancements
+Phase 3 — Frontend Integration
 
-Future versions can include:
-
-* Google/GitHub OAuth login
-* Email verification
-* Password reset
-* Role-based access control
-* Real-time notifications
-* Recurring tasks
-* Team collaboration
-* Task sharing
-* Advanced productivity analytics
-* Cloud deployment
-* Docker containerization
+- [ ] Login UI
+- [ ] Registration UI
+- [ ] Dashboard
+- [ ] Task creation interface
+- [ ] Task editing
+- [ ] Task filtering
+- [ ] Calendar interface
+- [ ] JWT-based API integration
+- [ ] Responsive mobile UI
 
 ---
 
-## 👨‍💻 Author
+Phase 4 — Profile & Analytics
 
-**Krishna Kushwaha**
+- [ ] User profile
+- [ ] Profile editing
+- [ ] Activity timeline
+- [ ] Productivity statistics
+- [ ] Task completion history
+- [ ] Productivity charts
+- [ ] Personalized dashboard
+
+---
+
+Phase 5 — Advanced Features
+
+- [ ] Interactive calendar
+- [ ] Task reminders
+- [ ] Notifications
+- [ ] Recurring tasks
+- [ ] Achievement system
+- [ ] Dark/light theme
+- [ ] Production deployment
+- [ ] Docker containerization
+
+---
+
+🔮 Future Enhancements
+
+The project can be extended with:
+
+- Google OAuth
+- GitHub OAuth
+- Email verification
+- Password reset
+- Role-Based Access Control (RBAC)
+- Recurring tasks
+- Team collaboration
+- Task sharing
+- Real-time notifications
+- Advanced productivity analytics
+- Docker-based deployment
+- CI/CD pipeline
+- Cloud deployment
+- Monitoring and logging
+
+---
+
+📚 Learning Outcomes
+
+This project provides hands-on experience with:
+
+Backend Development
+
+- Java
+- Object-Oriented Programming
+- Spring Boot
+- REST API development
+- Spring Data JPA
+- Hibernate
+- Layered architecture
+
+Database
+
+- MySQL
+- Relational database design
+- Entity relationships
+- JPA persistence
+
+Security
+
+- Spring Security
+- BCrypt password hashing
+- JWT authentication
+- Authentication and authorization
+- Protected REST APIs
+
+Software Engineering
+
+- MVC/layered architecture
+- DTO-based API design
+- API testing
+- Git & GitHub
+- Maven
+- Full-stack development
+
+---
+
+📈 Planned Architecture Evolution
+
+As the project grows, the architecture can evolve toward:
+
+                    ┌─────────────────┐
+                    │    Frontend     │
+                    │ HTML/CSS/JS     │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   REST API      │
+                    │  Spring Boot    │
+                    └────────┬────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+              ▼              ▼              ▼
+        ┌───────────┐  ┌───────────┐  ┌───────────┐
+        │   Auth    │  │   Tasks   │  │  Profile  │
+        │  Module   │  │  Module   │  │  Module   │
+        └───────────┘  └───────────┘  └───────────┘
+              │              │              │
+              └──────────────┼──────────────┘
+                             ▼
+                    ┌─────────────────┐
+                    │     MySQL       │
+                    └─────────────────┘
+
+This modular structure will make it easier to introduce additional functionality without tightly coupling different parts of the application.
+
+---
+
+🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+Contribution Workflow
+
+git clone <repository-url>
+
+Create a feature branch:
+
+git checkout -b feature/your-feature
+
+Make your changes and commit:
+
+git add .
+git commit -m "Add: your feature"
+
+Push the branch:
+
+git push origin feature/your-feature
+
+Then open a Pull Request.
+
+---
+
+👨‍💻 Author
+
+Krishna Kushwaha
 
 B.Tech — Computer Science Engineering
 
-Interested in Software Development, Full-Stack Development, Java, and modern web technologies.
+Interested in:
+
+- Software Development
+- Full-Stack Development
+- Java & Spring Boot
+- Data Structures & Algorithms
+- Artificial Intelligence
+- Modern Web Technologies
 
 ---
 
-## ⭐ Support
+⭐ Support
 
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
+If you find Task Tracker Pro useful or interesting, consider giving the repository a ⭐ on GitHub.
 
-**Task Tracker Pro — Plan. Track. Accomplish.**
+---
+
+<div align="center">🚀 Task Tracker Pro
+
+Plan. Track. Accomplish.
+
+Built with Java • Spring Boot • MySQL • JavaScript
+
+</div>
